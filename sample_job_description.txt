@@ -1,0 +1,39 @@
+Director — Observability — Infrastructure Operations — SRE — Platform Engineering
+
+Professional Summary
+Senior Engineering and Infrastructure Operations Leader with 14+ years of experience driving enterprise observability, Site Reliability Engineering (SRE), infrastructure monitoring, command center operations, and platform stability across regulated enterprise environments.
+
+Core Skills
+- Infrastructure Operations, Command Center Operations
+- Site Reliability Engineering (SRE), Production Operations
+- Observability & Monitoring: Prometheus, Grafana, ELK, Splunk, Dynatrace
+- Incident, Problem, Change & Event Management
+- AIOps, Monitoring Automation, Self-Healing Platforms
+- Cloud Platforms: Kubernetes, OpenShift, Docker, GCP
+- Infrastructure as Code: Terraform, Ansible
+- CMDB Governance, Service Mapping, Operational Governance
+- Middleware Platforms: WebSphere, BPM/BAW, Apache, IIS
+- Messaging Systems: Kafka, Redis, RabbitMQ
+- DevOps & CI/CD: Jenkins, GitLab CI
+- Python, Bash, Shell Scripting
+- ITIL, Compliance, Audit Readiness
+
+Professional Experience
+Morgan Stanley — Senior Manager / Director
+- Led enterprise infrastructure operations and SRE teams supporting mission-critical financial systems.
+- Improved MTTR by 30% through centralized monitoring and incident governance.
+- Implemented monitoring solutions using Prometheus, Grafana, ELK, Splunk, and Dynatrace.
+- Automated infrastructure provisioning and operational workflows using Terraform and Ansible.
+- Supported Kubernetes/OpenShift modernization initiatives and enterprise platform transformation.
+
+Tata Consultancy Services — Assistant Consultant
+- Managed WebSphere middleware environments and operational monitoring activities.
+- Supported hybrid cloud architecture initiatives and middleware operational stability.
+
+Certifications
+- Google Cloud Associate Cloud Engineer
+- UiPath RPA Infrastructure Engineer Foundation
+- ITIL v3 Foundation
+
+Education
+B.Tech in Information Technology — JNTU Kakinada

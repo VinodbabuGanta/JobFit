@@ -1,0 +1,23 @@
+# CV Tailoring Assistant
+
+This project is designed to help you optimize your resume against a job description.
+It focuses on practical matching logic and a user-friendly interface.
+
+## How it works
+- Parses the CV and job description text
+- Extracts key words and technology keywords
+- Finds overlaps between your profile and the role
+- Identifies important keywords missing from your profile
+- Builds a customized, role-focused summary
+
+## Example usage
+1. Paste your profile into the CV text area.
+2. Paste a job description into the JD text area.
+3. Click the button to analyze.
+4. Review the match score and generated summary.
+
+## Run locally
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```

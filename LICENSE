@@ -1,0 +1,62 @@
+import streamlit as st
+from resume_matcher import compute_match_score, build_tailored_summary, build_skill_recommendations
+
+st.set_page_config(page_title="CV Tailoring Assistant", page_icon="📄", layout="wide")
+
+st.title("📄 CV Tailoring Assistant")
+st.caption("Match your profile to a job description and generate a more targeted CV summary.")
+
+with open("sample_profile.txt", "r", encoding="utf-8") as f:
+    default_cv = f.read()
+
+with open("sample_job_description.txt", "r", encoding="utf-8") as f:
+    default_jd = f.read()
+
+col1, col2 = st.columns(2)
+
+with col1:
+    st.subheader("Your CV / Profile")
+    cv_text = st.text_area("Paste your CV here", value=default_cv, height=500)
+
+with col2:
+    st.subheader("Target Job Description")
+    jd_text = st.text_area("Paste the job description here", value=default_jd, height=500)
+
+if st.button("Analyze & Tailor"):
+    match_score, overlap, missing = compute_match_score(cv_text, jd_text)
+    skills = build_skill_recommendations(cv_text, jd_text)
+    tailored_summary = build_tailored_summary(cv_text, jd_text)
+
+    st.success(f"Overall role match: {match_score}%")
+
+    st.subheader("1. Matched Keywords")
+    if overlap:
+        st.write(", ".join(overlap[:25]))
+    else:
+        st.info("No direct keyword matches found. Consider improving the role alignment in your CV.")
+
+    st.subheader("2. Missing Keywords")
+    if missing:
+        st.write(", ".join(missing[:25]))
+    else:
+        st.success("Your CV covers most of the critical keywords for this role.")
+
+    st.subheader("3. Suggested Tailored Summary")
+    st.write(tailored_summary)
+
+    st.subheader("4. Quick Skill Match")
+    st.write(f"Matched skills: {', '.join(skills['matched'][:15]) if skills['matched'] else 'No direct matches'}")
+    st.write(f"Missing skills: {', '.join(skills['missing'][:15]) if skills['missing'] else 'No major gaps'}")
+
+    st.subheader("5. Recommendation")
+    st.markdown(
+        """
+        - Add role-specific terms such as engineering leadership, incidents, observability, automation, cloud, and reliability.
+        - Emphasize measurable outcomes such as MTTR, uptime, incident reduction, and cost savings.
+        - Mirror the employer's wording to improve ATS compatibility.
+        - Highlight cloud, Kubernetes, observability, and automation skills in your summary and experience bullets.
+        """
+    )
+
+st.markdown("---")
+st.caption("Built for job descriptions, ATS alignment, and CV optimization.")
